@@ -175,6 +175,14 @@ export default function CheckoutPage() {
       price: 1000000,
       icon: <Server className="h-5 w-5" />,
     },
+    {
+      id: "email",
+      name: "Email Domain (1 Year)",
+      description:
+        "Professional email domain registration and email forwarding",
+      price: 500000,
+      icon: <Mail className="h-5 w-5" />,
+    },
     // {
     //   id: "maintenance",
     //   name: "Maintenance Package (3 Months)",
