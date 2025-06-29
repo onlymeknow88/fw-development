@@ -673,8 +673,9 @@ export default function PaymentPage() {
                         Back
                       </Button>
                       <Button
-                        className="flex-1 bg-[#59E2C5] text-white font-semibold"
-                        size="lg"
+                        className="w-full border-[#59E2C5] text-[#59E2C5] hover:bg-[#59E2C5] hover:text-black font-semibold"
+                      size="lg"
+                       variant="bordered"
                         onClick={handleSubmitPaymentProof}
                         isLoading={isSubmitting}
                         startContent={!isSubmitting && <Send className="h-4 w-4" />}
