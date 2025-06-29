@@ -62,7 +62,7 @@ const services: ServiceDetail[] = [
   {
     id: "frontend",
     name: "Frontend Development",
-    baseHours: 40,
+    baseHours: 120,
     description: "Responsive web design with modern frameworks",
     icon: <Code className="h-6 w-6" />,
     basePrice: 6000000,
@@ -72,10 +72,10 @@ const services: ServiceDetail[] = [
   {
     id: "fullstack",
     name: "Full Stack Development",
-    baseHours: 80,
+    baseHours: 320,
     description: "Complete web application development",
     icon: <Database className="h-6 w-6" />,
-    basePrice: 13000000,
+    basePrice: 16000000,
     complexity: "Complex",
     category: "Development",
   },

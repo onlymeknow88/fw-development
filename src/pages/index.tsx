@@ -62,7 +62,7 @@ export default function FreelanceRateCalculator() {
     {
       id: "frontend",
       name: "Frontend Development",
-      baseHours: 40,
+      baseHours: 120,
       description: "Responsive web design with modern frameworks",
       longDescription:
         "Create stunning, responsive user interfaces using the latest frontend technologies. We build fast, accessible, and SEO-optimized websites that work perfectly across all devices and browsers.",
@@ -94,7 +94,7 @@ export default function FreelanceRateCalculator() {
         // "Performance optimization report",
         // "Deployment guide",
       ],
-      timeline: "3-5 weeks",
+      timeline: "1-3 weeks",
       complexity: "Medium",
       category: "Development",
       basePrice: 6000000, // 40 hours × 150k
@@ -134,7 +134,7 @@ export default function FreelanceRateCalculator() {
     {
       id: "fullstack",
       name: "Full Stack Development",
-      baseHours: 80,
+      baseHours: 320,
       description: "Complete web application development",
       longDescription:
         "End-to-end web application development combining beautiful frontend interfaces with powerful backend systems. Get a complete solution from database to user interface.",
@@ -170,7 +170,7 @@ export default function FreelanceRateCalculator() {
       complexity: "Complex",
       category: "Development",
       popular: true,
-      basePrice: 13000000, // 60 hours × 200k
+      basePrice: 16000000, // 60 hours × 200k
     },
     // {
     //   id: "uiux",
