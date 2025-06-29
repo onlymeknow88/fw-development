@@ -137,35 +137,6 @@ export default function ResponsiveNavbar({ cartItemCount = 0 }: NavbarProps) {
       <NavbarMenu className="bg-[#0A192F] border-t border-gray-800 pt-6">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.label}-${index}`}>
-            {item.hasDropdown ? (
-              <div className="flex flex-col space-y-2">
-                <div className="flex items-center gap-3 text-[#CCD6F6] font-medium">
-                  {item.icon}
-                  <span>{item.label}</span>
-                </div>
-                <div className="ml-7 space-y-2">
-                  {item.dropdownItems?.map((dropdownItem) => (
-                    <Link
-                      key={dropdownItem.label}
-                      href={dropdownItem.href}
-                      className="flex items-center gap-3 text-[#6C7994] hover:text-[#59E2C5] transition-colors py-2"
-                      onPress={() => setIsMenuOpen(false)}
-                    >
-                      {dropdownItem.icon}
-                      <span className="text-sm">{dropdownItem.label}</span>
-                    </Link>
-                  ))}
-                  <Link
-                    href="/services"
-                    className="flex items-center gap-3 text-[#59E2C5] font-semibold py-2"
-                    onPress={() => setIsMenuOpen(false)}
-                  >
-                    <Globe className="h-4 w-4" />
-                    <span className="text-sm">View All Services</span>
-                  </Link>
-                </div>
-              </div>
-            ) : (
               <Link
                 href={item.href}
                 className={`flex items-center gap-3 w-full ${
@@ -174,10 +145,8 @@ export default function ResponsiveNavbar({ cartItemCount = 0 }: NavbarProps) {
                 size="lg"
                 onPress={() => setIsMenuOpen(false)}
               >
-                {item.icon}
                 {item.label}
               </Link>
-            )}
           </NavbarMenuItem>
         ))}
         

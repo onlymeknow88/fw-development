@@ -104,7 +104,8 @@ export default function ContactPage() {
             <span className="text-[#CCD6F6]"> Touch</span>
           </h2>
           <p className="text-xl text-[#6C7994] mb-8 max-w-3xl mx-auto">
-            Ready to start your project? Have questions about our services? We'd love to hear from you. Let's discuss
+            {/* @ts-ignore */}
+            Ready to start your project? Have questions about our services? We&apos;d love to hear from you. Let&apos;s discuss
             how we can help bring your ideas to life.
           </p>
         </div>
@@ -130,7 +131,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email</h4>
                     <p className="text-[#6C7994]">fadjri.w@gmail.com</p>
-                    <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
+                    <p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
 
@@ -351,14 +352,14 @@ export default function ContactPage() {
                 <h4 className="font-semibold text-white mb-2">How long does a typical project take?</h4>
                 <p className="text-[#6C7994] text-sm">
                   Project timelines vary based on complexity. Frontend projects typically take 3-5 weeks, while
-                  full-stack applications can take 6-8 weeks. We'll provide a detailed timeline during consultation.
+                  full-stack applications can take 6-8 weeks. We&apos;ll provide a detailed timeline during consultation.
                 </p>
               </CardBody>
             </Card>
 
             <Card className="bg-[#112240]">
               <CardBody className="p-6">
-                <h4 className="font-semibold text-white mb-2">What's your payment structure?</h4>
+                <h4 className="font-semibold text-white mb-2">What&apos;s your payment structure?</h4>
                 <p className="text-[#6C7994] text-sm">
                   We require 50% down payment to start the project and 50% upon completion. We accept bank transfers and
                   e-wallet payments.

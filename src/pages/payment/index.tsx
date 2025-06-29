@@ -528,8 +528,8 @@ export default function PaymentPage() {
                       <h4 className="font-semibold text-white">How to Pay with OVO:</h4>
                       <ol className="list-decimal list-inside space-y-2 text-[#6C7994]">
                         <li>Open your OVO app</li>
-                        <li>Select "Transfer" or "Kirim"</li>
-                        <li>Choose "To OVO Account" or "Ke Akun OVO"</li>
+                        <li>Select &quot;Transfer&quot; or &quot;Kirim&quot;</li>
+                        <li>Choose &quot;To OVO Account&quot; or &quot;Ke Akun OVO&quot;</li>
                         <li>
                           Enter phone number: <span className="text-white font-mono">{ovoMerchantPhone}</span>
                         </li>
@@ -537,7 +537,7 @@ export default function PaymentPage() {
                           Enter amount:{" "}
                           <span className="text-[#59E2C5] font-semibold">{formatRupiah(orderData.total)}</span>
                         </li>
-                        <li>Add note: "Order #{orderData.orderId}"</li>
+                        <li>Add note: &quot;Order #{orderData.orderId}&quot;</li>
                         <li>Complete the transfer</li>
                         <li>Take a screenshot of the successful transaction</li>
                       </ol>
@@ -563,7 +563,7 @@ export default function PaymentPage() {
                       size="lg"
                       onClick={() => setPaymentStep(2)}
                     >
-                      I've Made the Payment
+                      I&apos;ve Made the Payment
                     </Button>
                   </CardBody>
                 </Card>
@@ -702,7 +702,7 @@ export default function PaymentPage() {
                       <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
                       <h4 className="text-xl font-semibold text-white mb-2">Thank You!</h4>
                       <p className="text-[#6C7994] mb-4">
-                        Your payment proof has been submitted successfully. We'll verify your payment and start working
+                        Your payment proof has been submitted successfully. We&apos;ll verify your payment and start working
                         on your project within 1-2 hours.
                       </p>
                       <div className="text-sm text-green-400">
@@ -722,7 +722,7 @@ export default function PaymentPage() {
                           <Clock className="h-5 w-5 text-[#59E2C5] mt-0.5" />
                           <div>
                             <p className="text-white font-medium">Payment Verification (1-2 hours)</p>
-                            <p className="text-sm text-[#6C7994]">We'll verify your payment and send confirmation</p>
+                            <p className="text-sm text-[#6C7994]">We&apos;ll verify your payment and send confirmation</p>
                           </div>
                         </div>
                         <div className="flex items-start space-x-3">
@@ -730,7 +730,7 @@ export default function PaymentPage() {
                           <div>
                             <p className="text-white font-medium">Project Kickoff</p>
                             <p className="text-sm text-[#6C7994]">
-                              We'll contact you to discuss project details and timeline
+                              We&apos;ll contact you to discuss project details and timeline
                             </p>
                           </div>
                         </div>
