@@ -299,7 +299,7 @@ export default function FreelanceRateCalculator() {
   return (
     <div className="min-h-screen bg-[#0A192F]">
       {/* Header */}
- <ResponsiveNavbar />
+      <ResponsiveNavbar />
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -308,9 +308,9 @@ export default function FreelanceRateCalculator() {
             <span className="text-[#CCD6F6]"> Services</span>
           </h2>
           <p className="text-xl text-[#6C7994] mb-8 max-w-3xl mx-auto">
-            Services for web development, mobile apps,
-            and digital solutions. From concept to deployment, we deliver
-            high-quality results with transparent pricing.
+            Services for web development, mobile apps, and digital solutions.
+            From concept to deployment, we deliver high-quality results with
+            transparent pricing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* <Link href="/">
@@ -359,181 +359,183 @@ export default function FreelanceRateCalculator() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-[#CCD6F6] mb-4">
-              Complete Service Portfolio
+              Our Services
             </h3>
             <p className="text-xl text-[#6C7994]">
               Professional development services with detailed specifications
             </p>
           </div>
 
-         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-  {services.map((service) => (
-    <Card
-      key={service.id}
-      className={`relative bg-[#112240] p-4 sm:p-6 lg:p-[30px] ${
-        service.popular ? "ring-2 ring-green-500" : ""
-      }`}
-    >
-      {service.popular && (
-        <Chip
-          color="success"
-          variant="solid"
-          className="absolute -top-2 left-4 sm:left-6 z-10 text-xs sm:text-sm"
-          startContent={<Star className="h-3 w-3" />}
-        >
-          Most Popular
-        </Chip>
-      )}
-
-      <CardHeader className="pb-3 sm:pb-4">
-        <div className="flex flex-col justify-between w-full">
-          {/* Mobile: Stack vertically, Desktop: Side by side */}
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between w-full gap-4 sm:gap-0">
-            <div className="flex items-start space-x-3 sm:space-x-4 flex-1">
-              <div className="text-[#A6B0D0] flex-shrink-0">{service.icon}</div>
-              <div className="flex-1 min-w-0">
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">
-                  {service.name}
-                </h4>
-                <p className="text-sm sm:text-base text-[#6C7994] mt-1">
-                  {service.description}
-                </p>
-              </div>
-            </div>
-            
-            {/* Price section - centered on mobile, right-aligned on desktop */}
-            <div className="text-center sm:text-right flex-shrink-0">
-              <div className="text-xl sm:text-2xl font-bold text-[#59E2C5]">
-                {formatRupiah(service.basePrice)}
-              </div>
-              <div className="text-xs sm:text-sm text-gray-500">
-                Starting from
-              </div>
-            </div>
-          </div>
-
-          {/* Chips - responsive grid */}
-          <div className="flex flex-wrap items-start gap-1.5 sm:gap-2 mt-3 sm:mt-4">
-            <Chip
-              variant="flat"
-              color="success"
-              className="text-[#59E2C5] text-xs sm:text-sm"
-              size="sm"
-            >
-              {service.complexity}
-            </Chip>
-            <Chip
-              variant="flat"
-              color="success"
-              className="text-[#59E2C5] text-xs sm:text-sm"
-              size="sm"
-            >
-              {service.category}
-            </Chip>
-            <Chip
-              variant="flat"
-              color="success"
-              className="text-[#59E2C5] text-xs sm:text-sm"
-              size="sm"
-            >
-              {service.baseHours}h base
-            </Chip>
-          </div>
-        </div>
-      </CardHeader>
-
-      <CardBody className="space-y-4 sm:space-y-5 lg:space-y-6">
-        {/* Long Description */}
-        <p className="text-sm sm:text-base text-[#6C7994] leading-relaxed">
-          {service.longDescription}
-        </p>
-
-        {/* Key Features */}
-        <div>
-          <h5 className="font-semibold mb-2 sm:mb-3 flex items-center text-white text-sm sm:text-base">
-            <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-            Key Features
-          </h5>
-          {/* Responsive grid - 1 column on mobile, 2 on larger screens */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2">
-            {service.features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-start text-xs sm:text-sm text-white"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+            {services.map((service) => (
+              <Card
+                key={service.id}
+                className={`relative bg-[#112240] p-4 sm:p-6 lg:p-[30px] ${
+                  service.popular ? "ring-2 ring-green-500" : ""
+                }`}
               >
-                <CheckCircle className="h-3 w-3 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                <span className="leading-relaxed">{feature}</span>
-              </div>
+                {service.popular && (
+                  <Chip
+                    color="success"
+                    variant="solid"
+                    className="absolute -top-2 left-4 sm:left-6 z-10 text-xs sm:text-sm"
+                    startContent={<Star className="h-3 w-3" />}
+                  >
+                    Most Popular
+                  </Chip>
+                )}
+
+                <CardHeader className="pb-3 sm:pb-4">
+                  <div className="flex flex-col justify-between w-full">
+                    {/* Mobile: Stack vertically, Desktop: Side by side */}
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between w-full gap-4 sm:gap-0">
+                      <div className="flex items-start space-x-3 sm:space-x-4 flex-1">
+                        <div className="text-[#A6B0D0] flex-shrink-0">
+                          {service.icon}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">
+                            {service.name}
+                          </h4>
+                          <p className="text-sm sm:text-base text-[#6C7994] mt-1">
+                            {service.description}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Price section - centered on mobile, right-aligned on desktop */}
+                      <div className="text-center sm:text-right flex-shrink-0">
+                        <div className="text-xl sm:text-2xl font-bold text-[#59E2C5]">
+                          {formatRupiah(service.basePrice)}
+                        </div>
+                        <div className="text-xs sm:text-sm text-gray-500">
+                          Starting from
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Chips - responsive grid */}
+                    <div className="flex flex-wrap items-start gap-1.5 sm:gap-2 mt-3 sm:mt-4">
+                      <Chip
+                        variant="flat"
+                        color="success"
+                        className="text-[#59E2C5] text-xs sm:text-sm"
+                        size="sm"
+                      >
+                        {service.complexity}
+                      </Chip>
+                      <Chip
+                        variant="flat"
+                        color="success"
+                        className="text-[#59E2C5] text-xs sm:text-sm"
+                        size="sm"
+                      >
+                        {service.category}
+                      </Chip>
+                      <Chip
+                        variant="flat"
+                        color="success"
+                        className="text-[#59E2C5] text-xs sm:text-sm"
+                        size="sm"
+                      >
+                        {service.baseHours}h base
+                      </Chip>
+                    </div>
+                  </div>
+                </CardHeader>
+
+                <CardBody className="space-y-4 sm:space-y-5 lg:space-y-6">
+                  {/* Long Description */}
+                  <p className="text-sm sm:text-base text-[#6C7994] leading-relaxed">
+                    {service.longDescription}
+                  </p>
+
+                  {/* Key Features */}
+                  <div>
+                    <h5 className="font-semibold mb-2 sm:mb-3 flex items-center text-white text-sm sm:text-base">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      Key Features
+                    </h5>
+                    {/* Responsive grid - 1 column on mobile, 2 on larger screens */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2">
+                      {service.features.map((feature, index) => (
+                        <div
+                          key={index}
+                          className="flex items-start text-xs sm:text-sm text-white"
+                        >
+                          <CheckCircle className="h-3 w-3 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <Divider />
+
+                  {/* Technologies */}
+                  <div>
+                    <h5 className="font-semibold mb-2 sm:mb-3 flex items-center text-white text-sm sm:text-base">
+                      <Zap className="h-4 w-4 text-blue-500 mr-2" />
+                      Technologies Used
+                    </h5>
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      {service.technologies.map((tech, index) => (
+                        <Chip
+                          key={index}
+                          size="sm"
+                          variant="flat"
+                          color="success"
+                          className="text-[#59E2C5] text-xs"
+                        >
+                          {tech}
+                        </Chip>
+                      ))}
+                    </div>
+                  </div>
+
+                  <Divider />
+
+                  {/* Deliverables */}
+                  <div>
+                    <h5 className="font-semibold mb-2 sm:mb-3 flex items-center text-white text-sm sm:text-base">
+                      <Shield className="h-4 w-4 text-purple-500 mr-2" />
+                      What You Get
+                    </h5>
+                    <ul className="space-y-1">
+                      {service.deliverables.map((deliverable, index) => (
+                        <li
+                          key={index}
+                          className="flex items-start text-xs sm:text-sm text-white"
+                        >
+                          <ArrowRight className="h-3 w-3 text-purple-500 mr-2 flex-shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{deliverable}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Divider />
+
+                  {/* Timeline & Action - responsive layout */}
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+                    <div className="flex items-center text-xs sm:text-sm text-white">
+                      <Clock className="h-4 w-4 mr-2 flex-shrink-0" />
+                      <span>Timeline: {service.timeline}</span>
+                    </div>
+                    <Link href={`/checkout?service=${service.id}`}>
+                      <Button
+                        className="border-[#59E2C5] text-[#59E2C5] hover:bg-[#59E2C5] hover:text-white w-full sm:w-auto"
+                        variant="bordered"
+                        size="md"
+                      >
+                        Order Now
+                      </Button>
+                    </Link>
+                  </div>
+                </CardBody>
+              </Card>
             ))}
           </div>
-        </div>
-
-        <Divider />
-
-        {/* Technologies */}
-        <div>
-          <h5 className="font-semibold mb-2 sm:mb-3 flex items-center text-white text-sm sm:text-base">
-            <Zap className="h-4 w-4 text-blue-500 mr-2" />
-            Technologies Used
-          </h5>
-          <div className="flex flex-wrap gap-1.5 sm:gap-2">
-            {service.technologies.map((tech, index) => (
-              <Chip
-                key={index}
-                size="sm"
-                variant="flat"
-                color="success"
-                className="text-[#59E2C5] text-xs"
-              >
-                {tech}
-              </Chip>
-            ))}
-          </div>
-        </div>
-
-        <Divider />
-
-        {/* Deliverables */}
-        <div>
-          <h5 className="font-semibold mb-2 sm:mb-3 flex items-center text-white text-sm sm:text-base">
-            <Shield className="h-4 w-4 text-purple-500 mr-2" />
-            What You Get
-          </h5>
-          <ul className="space-y-1">
-            {service.deliverables.map((deliverable, index) => (
-              <li
-                key={index}
-                className="flex items-start text-xs sm:text-sm text-white"
-              >
-                <ArrowRight className="h-3 w-3 text-purple-500 mr-2 flex-shrink-0 mt-0.5" />
-                <span className="leading-relaxed">{deliverable}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <Divider />
-
-        {/* Timeline & Action - responsive layout */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
-          <div className="flex items-center text-xs sm:text-sm text-white">
-            <Clock className="h-4 w-4 mr-2 flex-shrink-0" />
-            <span>Timeline: {service.timeline}</span>
-          </div>
-          <Link href={`/checkout?service=${service.id}`}>
-            <Button
-              className="border-[#59E2C5] text-[#59E2C5] hover:bg-[#59E2C5] hover:text-white w-full sm:w-auto"
-              variant="bordered"
-              size="md"
-            >
-              Order Now
-            </Button>
-          </Link>
-        </div>
-      </CardBody>
-    </Card>
-  ))}
-</div>
         </div>
       </section>
 
@@ -555,7 +557,9 @@ export default function FreelanceRateCalculator() {
                 <div className=" w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-[#59E2C5]" />
                 </div>
-                <h4 className="font-semibold mb-2 text-white">1. Consultation</h4>
+                <h4 className="font-semibold mb-2 text-white">
+                  1. Consultation
+                </h4>
                 <p className="text-sm text-gray-400">
                   Understand your requirements and project goals through
                   detailed discussion
@@ -581,7 +585,9 @@ export default function FreelanceRateCalculator() {
                 <div className=" w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Code className="h-8 w-8 text-[#59E2C5]" />
                 </div>
-                <h4 className="font-semibold mb-2 text-white">3. Development</h4>
+                <h4 className="font-semibold mb-2 text-white">
+                  3. Development
+                </h4>
                 <p className="text-sm text-gray-400">
                   Build your project with regular updates and milestone reviews
                 </p>
@@ -621,13 +627,15 @@ export default function FreelanceRateCalculator() {
                     Calculate Project Cost
                   </Button>
                 </Link> */}
-                <Button
-                  size="lg"
-                  variant="bordered"
-                  className="font-semibold border-[#59E2C5] text-[#59E2C5] hover:bg-[#59E2C5] hover:text-white"
-                >
-                  Contact Us
-                </Button>
+                <Link href={`/contact`}>
+                  <Button
+                    size="lg"
+                    variant="bordered"
+                    className="font-semibold border-[#59E2C5] text-[#59E2C5] hover:bg-[#59E2C5] hover:text-white"
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </CardBody>
           </Card>
@@ -640,7 +648,7 @@ export default function FreelanceRateCalculator() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Image src="/logo.png"  alt="logo" className="h-6 w-6" />
+                <Image src="/logo.png" alt="logo" className="h-6 w-6" />
                 <span className="text-xl font-bold">FW Development</span>
               </div>
               <p className="text-gray-400">
