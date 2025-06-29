@@ -4,6 +4,7 @@ import { IncomingForm } from "formidable"
 import { promises as fs } from "fs"
 import { join } from "path"
 import nodemailer from "nodemailer"
+import { tmpdir } from "os"
 
 // Disable body parser for file uploads
 export const config = {
@@ -27,7 +28,7 @@ interface AddOnItem {
 
 // Create Gmail transporter
 const createGmailTransporter = () => {
-  return nodemailer.createTransport({
+  return nodemailer.createTransporter({
     service: "gmail",
     auth: {
       user: process.env.GMAIL_USER,
@@ -46,19 +47,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    // Parse form data
+    // Use temporary directory for file uploads
+    const tempUploadDir = join(tmpdir(), "payment-proofs")
+    
+    // Parse form data with temp directory
     const form = new IncomingForm({
-      uploadDir: join(process.cwd(), "public", "uploads", "payment-proofs"),
+      uploadDir: tempUploadDir,
       keepExtensions: true,
       maxFileSize: 5 * 1024 * 1024, // 5MB
     })
 
-    // Ensure upload directory exists
-    const uploadDir = join(process.cwd(), "public", "uploads", "payment-proofs")
+    // Ensure temp upload directory exists
     try {
-      await fs.access(uploadDir)
+      await fs.access(tempUploadDir)
     } catch {
-      await fs.mkdir(uploadDir, { recursive: true })
+      await fs.mkdir(tempUploadDir, { recursive: true })
     }
 
     const [fields, files] = await new Promise<[any, any]>((resolve, reject) => {
@@ -83,13 +86,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const timestamp = Date.now()
     const fileExtension = paymentProof.originalFilename?.split(".").pop() || "jpg"
     const fileName = `payment-${orderData.orderId}-${timestamp}.${fileExtension}`
-    const newPath = join(uploadDir, fileName)
+    const tempFilePath = join(tempUploadDir, fileName)
 
-    // Move file to final location
-    await fs.rename(paymentProof.filepath, newPath)
+    // Move file to temp location with proper name
+    await fs.rename(paymentProof.filepath, tempFilePath)
 
     // Read file for email attachment
-    const fileBuffer = await fs.readFile(newPath)
+    const fileBuffer = await fs.readFile(tempFilePath)
 
     // Prepare data for email
     const paymentData = {
@@ -101,7 +104,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       services: orderData.services,
       addOns: orderData.addOns,
       additionalNotes: additionalNotes || "",
-      paymentProofUrl: `/uploads/payment-proofs/${fileName}`,
       submittedAt: new Date().toISOString(),
     }
 
@@ -369,6 +371,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         customerEmailId: customerEmailResult.messageId,
       })
 
+      // Clean up temporary file after sending emails
+      try {
+        await fs.unlink(tempFilePath)
+        console.log("Temporary file cleaned up:", tempFilePath)
+      } catch (cleanupError) {
+        console.warn("Failed to cleanup temporary file:", cleanupError)
+      }
+
       return res.status(200).json({
         success: true,
         message: "Payment proof submitted and emails sent successfully",
@@ -381,6 +391,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       })
     } catch (emailError) {
       console.error("Email sending error:", emailError)
+
+      // Clean up temporary file even if email fails
+      try {
+        await fs.unlink(tempFilePath)
+        console.log("Temporary file cleaned up after email error:", tempFilePath)
+      } catch (cleanupError) {
+        console.warn("Failed to cleanup temporary file after email error:", cleanupError)
+      }
 
       // Still return success for file upload, but note email failure
       return res.status(200).json({
