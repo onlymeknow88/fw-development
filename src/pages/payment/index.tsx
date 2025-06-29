@@ -559,7 +559,7 @@ export default function PaymentPage() {
                     </div>
 
                     <Button
-                      className="w-full bg-[#59E2C5] text-white font-semibold"
+                      className="w-full border-[#59E2C5] text-[#59E2C5] hover:bg-[#59E2C5] hover:text-black font-semibold"
                       size="lg"
                       onClick={() => setPaymentStep(2)}
                     >
