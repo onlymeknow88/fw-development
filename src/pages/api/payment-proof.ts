@@ -28,7 +28,7 @@ interface AddOnItem {
 
 // Create Gmail transporter
 const createGmailTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: process.env.GMAIL_USER,
