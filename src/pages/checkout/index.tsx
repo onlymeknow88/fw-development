@@ -172,7 +172,7 @@ export default function CheckoutPage() {
       name: "Web Hosting (1 Year)",
       description:
         "Reliable web hosting with SSL certificate and daily backups",
-      price: 780000,
+      price: 1000000,
       icon: <Server className="h-5 w-5" />,
     },
     // {
