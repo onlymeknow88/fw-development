@@ -175,8 +175,9 @@ export default function ResponsiveNavbar({ cartItemCount = 0 }: NavbarProps) {
           <Button
             as={Link}
             href="/checkout"
-            className="w-full bg-[#59E2C5] text-white hover:bg-[#4BC7AA] transition-colors mt-4"
+            className="w-full border-[#59E2C5] text-[#59E2C5] hover:text-white hover:bg-[#59E2C5] transition-colors mt-4"
             size="lg"
+            variant="bordered"
             startContent={
               <Badge content={cartItemCount > 0 ? cartItemCount : ""} color="danger" size="sm" isInvisible={cartItemCount === 0}>
                 <ShoppingCart className="h-4 w-4" />

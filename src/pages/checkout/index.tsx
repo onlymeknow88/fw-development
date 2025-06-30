@@ -175,14 +175,14 @@ export default function CheckoutPage() {
       price: 1000000,
       icon: <Server className="h-5 w-5" />,
     },
-    {
-      id: "email",
-      name: "Email Domain (1 Year)",
-      description:
-        "Professional email domain registration and email forwarding",
-      price: 500000,
-      icon: <Mail className="h-5 w-5" />,
-    },
+    // {
+    //   id: "email",
+    //   name: "Email Domain (1 Year)",
+    //   description:
+    //     "Professional email domain registration and email forwarding",
+    //   price: 500000,
+    //   icon: <Mail className="h-5 w-5" />,
+    // },
     // {
     //   id: "maintenance",
     //   name: "Maintenance Package (3 Months)",
@@ -328,7 +328,7 @@ export default function CheckoutPage() {
                         className="mt-1"
                       />
                       <div className="flex-1">
-                        <div className="flex items-center justify-between">
+                        <div className="flex lg:flex-row flex-col lg:items-center justify-between">
                           <div className="flex items-center space-x-3">
                             <div className="text-[#A6B0D0]">{service.icon}</div>
                             <div>
@@ -341,7 +341,7 @@ export default function CheckoutPage() {
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="font-bold text-[#59E2C5]">
+                            <div className="font-bold text-lg text-[#59E2C5]">
                               {formatRupiah(service.basePrice)}
                             </div>
                             <div className="text-xs text-gray-500">
@@ -396,7 +396,7 @@ export default function CheckoutPage() {
                         className="mt-1"
                       />
                       <div className="flex-1">
-                        <div className="flex items-center justify-between">
+                       <div className="flex lg:flex-row flex-col lg:items-center justify-between">
                           <div className="flex items-center space-x-3">
                             <div className="text-[#A6B0D0]">{addOn.icon}</div>
                             <div>
@@ -408,7 +408,7 @@ export default function CheckoutPage() {
                               </p>
                             </div>
                           </div>
-                          <div className="font-bold text-[#59E2C5]">
+                          <div className="font-bold text-lg text-right text-[#59E2C5]">
                             {formatRupiah(addOn.price)}
                           </div>
                         </div>
