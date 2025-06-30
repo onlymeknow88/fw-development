@@ -79,7 +79,7 @@ export default function ResponsiveNavbar({ cartItemCount = 0 }: NavbarProps) {
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/logo.png" alt="FW Development" width={32} height={32} className="rounded-lg" />
             <div className="flex flex-col">
-              <p className="font-bold text-[#CCD6F6] text-lg">FW Development</p>
+              <p className="font-bold text-[#CCD6F6] text-lg">Development</p>
               {/* <p className="text-xs text-[#6C7994] hidden sm:block">Professional Development Services</p> */}
             </div>
           </Link>

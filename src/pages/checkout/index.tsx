@@ -690,11 +690,11 @@ export default function CheckoutPage() {
                 </div>
 
                 {/* Contact Info */}
-                <div className="text-center text-sm text-[#6C7994] pt-4 border-t border-gray-700">
+                {/* <div className="text-center text-sm text-[#6C7994] pt-4 border-t border-gray-700">
                   <p>Need help? Contact us:</p>
                   <p className="text-[#59E2C5]">fadjri.w@gmail.com</p>
                   <p className="text-[#59E2C5]">+62 853-91000-900</p>
-                </div>
+                </div> */}
               </CardBody>
             </Card>
           </div>
