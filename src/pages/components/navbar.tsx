@@ -150,25 +150,6 @@ export default function ResponsiveNavbar({ cartItemCount = 0 }: NavbarProps) {
           </NavbarMenuItem>
         ))}
         
-        {/* Mobile Contact Actions */}
-        <NavbarMenuItem>
-          <div className="flex flex-col space-y-3 pt-4 border-t border-gray-800">
-            <Link
-              href="mailto:fadjri.w@gmail.com"
-              className="flex items-center gap-3 text-[#6C7994] hover:text-[#59E2C5] transition-colors"
-            >
-              <Mail className="h-4 w-4" />
-              <span className="text-sm">fadjri.w@gmail.com</span>
-            </Link>
-            <Link
-              href="tel:+6285391000900"
-              className="flex items-center gap-3 text-[#6C7994] hover:text-[#59E2C5] transition-colors"
-            >
-              <Phone className="h-4 w-4" />
-              <span className="text-sm">+62 853-91000-900</span>
-            </Link>
-          </div>
-        </NavbarMenuItem>
 
         {/* Mobile CTA */}
         <NavbarMenuItem>
