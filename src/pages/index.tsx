@@ -687,7 +687,6 @@ export default function FreelanceRateCalculator() {
                 <li>fadjri.w@gmail.com</li>
                 <li>+62 853-91000-900</li>
                 <li>Balikpapan, Indonesia</li>
-                <li>Available 24/7</li>
               </ul>
             </div>
           </div>

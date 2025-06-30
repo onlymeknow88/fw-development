@@ -351,7 +351,7 @@ export default function ContactPage() {
               <CardBody className="p-6">
                 <h4 className="font-semibold text-white mb-2">How long does a typical project take?</h4>
                 <p className="text-[#6C7994] text-sm">
-                  Project timelines vary based on complexity. Frontend projects typically take 3-5 weeks, while
+                  Project timelines vary based on complexity. Frontend projects typically take 1-3 weeks, while
                   full-stack applications can take 6-8 weeks. We&apos;ll provide a detailed timeline during consultation.
                 </p>
               </CardBody>
@@ -430,7 +430,6 @@ export default function ContactPage() {
                 <li>fadjri.w@gmail.com</li>
                 <li>+62 853-91000-900</li>
                 <li>Balikpapan, Indonesia</li>
-                <li>Available 24/7</li>
               </ul>
             </div>
           </div>
