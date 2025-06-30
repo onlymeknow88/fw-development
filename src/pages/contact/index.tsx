@@ -429,7 +429,8 @@ export default function ContactPage() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a
-                  href="https://instagram.com/fw.development"
+                target="_blank"
+                  href="https://www.instagram.com/fadjri_w/"
                   className="hover:text-white transition-colors flex items-center gap-2"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -440,6 +441,7 @@ export default function ContactPage() {
               </li>
               <li>
                 <a
+                target="_blank"
                   href="https://github.com/onlymeknow88"
                   className="hover:text-white transition-colors flex items-center gap-2"
                 >
@@ -451,7 +453,8 @@ export default function ContactPage() {
               </li>
               <li>
                 <a
-                  href="www.linkedin.com/in/fadjri-wivindi-7a3387211"
+                    target="_blank"
+                  href="https://www.linkedin.com/in/fadjri-wivindi-7a3387211"
                   className="hover:text-white transition-colors flex items-center gap-2"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
