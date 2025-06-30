@@ -240,14 +240,19 @@ export default function FreelanceRateCalculator() {
                 Calculate Project Cost
               </Button>
             </Link> */}
-            <Button
-              size="lg"
-              variant="bordered"
-              className="font-semibold border-[#59E2C5] text-[#59E2C5] hover:bg-[#59E2C5] hover:text-white"
+            <a
+            
               href="#services"
+            >
+            <Button
+            // as={Link}
+            size="lg"
+            variant="bordered"
+            className="font-semibold border-[#59E2C5] text-[#59E2C5] hover:bg-[#59E2C5] hover:text-white"
             >
               View All Services
             </Button>
+                </a>
           </div>
         </div>
       </section>
