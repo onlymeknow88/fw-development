@@ -198,7 +198,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-[#6C7994] hover:text-[#59E2C5] transition-colors"
                     >
-                      Fadjri Wicaksono
+                      Fadjri Wivindi
                     </a>
                     <p className="text-sm text-gray-500">Connect for professional networking</p>
                   </div>
